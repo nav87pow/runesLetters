@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --gray-400: #2e3442;
+  --white: #fff;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-text: "Libre Franklin", sans-serif;
+  --font-rune: "Noto Sans Runic", sans-serif;
+}
+main {
+  font-family: var(--font-space);
+  font-size: 16px;
+  line-height: 1.4;
+  width: 60%;
+  margin: 0 auto;
+  color: var(--gray-400);
+}
+h1 {
+  text-align: center;
+  font-size: 30vh;
+  margin: 6vh auto;
+}
+p {
+  font-weight: 200;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+  font-family: var(--font-text);
+  margin-top: 2rem;
+}
+h6 {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.astoTag {
+  display: flex;
+  flex-direction: column;
+  /*border: 0.8px solid var(--gray-400);*/
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 0.4rem;
+  max-width: 2rem;
+  max-height: 3rem;
+  padding: 8px 12px 6px 12px;
+}
+h5 {
+  font-family: var(--font-text);
+  font-weight: 500;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 4px 0 0 0;
+}
+img {
+  margin: 0;
+  width: 0.8rem;
+  max-width: 1rem;
+}
+.tagPower {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  margin: 0.5rem 0.5rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: var(--gray-400);
+  /*border: 0.8px solid #2e3442;*/
+  color: var(--white);
+  font-family: var(--font-rune);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 98%;
+  width: 90%;
+  margin: 1vh auto;
+}
+button {
+  font-size: 5vw;
+  border: none;
+  background-color: var(--white);
+}
+
+.navLetter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.8vh;
+   margin-top: 3.2vh;
+  gap: 0.2rem;
+}
+
+.letterNav {
+  font-family: var(--font-rune);
+  font-size: 0.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.12rem 0.16rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  border:1px solid var( --gray-400);
+  margin:0 0.28vw;
+}
+
+.letterNav:hover {
+  background-color: var(--gray-400);
+  color: white;
+}
+.letterNav.selected {
+  background-color: var(--gray-400);
+  color: white;
+  border: 1px solid var(--gray-400);
+}
+
+@media (max-width: 800px) {
+  main {
+    width: 90%;
+  }
+  h1 {
+    font-size: 8rem;
+    margin: 0;
+  }
+  .navLetter {
+    flex-wrap: wrap;
+      gap: 0.42rem;
+    }
+}
