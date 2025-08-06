@@ -317,7 +317,7 @@ if (!hasStarted) {
     <div className="introScreen">
       <h2>Have a question for the ancient gods?</h2>
       <h3>Concentrate on your question, then click to reveal the rune’s wisdom.</h3>
-      <button onClick={handleStartClick}>↭ Consult the Runes ↭</button>
+      <button className="randomBtn" onClick={handleStartClick}>↭ Consult the Runes ↭</button>
    <p>*This experience is inspired by ancient pagan beliefs from Bronze Age Europe, where runes were used for divination and ritual.</p>
   <a className="skipIntro" onClick={handleStartToPageClick}>
  skip the ritual and explore the runes
@@ -343,7 +343,7 @@ if (!hasStarted) {
 
         <nav>
           <button onClick={handelPrevClick}>≺</button>
-          <button onClick={handelRandomClick}> ↭Consult the Runes↭ </button>
+          <button className="randomBtn" onClick={handelRandomClick} > ↭ Consult the Runes ↭ </button>
           <button onClick={handelNextClick}>≻</button>
         </nav>
         <h1>{info[currentRune].letter}</h1>

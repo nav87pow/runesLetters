@@ -137,11 +137,11 @@ button {
 
 .letterNav:hover {
   background-color: var(--gray-400);
-  color: white;
+  color:var(--white);
 }
 .letterNav.selected {
   background-color: var(--gray-400);
-  color: white;
+  color: var(--white);
   border: 1px solid var(--gray-400);
 }
 
@@ -189,7 +189,12 @@ button {
   margin: 2vh auto 1vh;
 }
 
-
+button.randomBtn:hover {
+  background-color: var(--gray-400);
+  color: var(--white) ;
+      padding: 1vh 1vw;
+    border-radius: 0.24em;
+}
 @media (max-width: 800px) {
   main {
     width: 90%;
