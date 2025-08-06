@@ -282,6 +282,7 @@ const info = [
 
 const App = () => {
   const [currentRune, setCurrentRune] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
 
   const handelNextClick = () => {
     if (currentRune === info.length - 1) {
@@ -303,6 +304,28 @@ const App = () => {
 
     setCurrentRune((currentRune) => Math.ceil(Math.random() * length));
   };
+const handleStartToPageClick = () => {
+  setHasStarted(true);
+};
+
+  const handleStartClick = () => {
+  handelRandomClick();  
+  setHasStarted(true); 
+};
+if (!hasStarted) {
+  return (
+    <div className="introScreen">
+      <h2>Have a question for the ancient gods?</h2>
+      <h3>Concentrate on your question, then click to reveal the rune’s wisdom.</h3>
+      <button onClick={handleStartClick}>↭ Consult the Runes ↭</button>
+   <p>*This experience is inspired by ancient pagan beliefs from Bronze Age Europe, where runes were used for divination and ritual.</p>
+  <a className="skipIntro" onClick={handleStartToPageClick}>
+ skip the ritual and explore the runes
+</a>
+    </div>
+  );
+}
+
   return (
     <div className="App">
       <main>
@@ -320,7 +343,7 @@ const App = () => {
 
         <nav>
           <button onClick={handelPrevClick}>≺</button>
-          <button onClick={handelRandomClick}> ↭try ur luck↭ </button>
+          <button onClick={handelRandomClick}> ↭Consult the Runes↭ </button>
           <button onClick={handelNextClick}>≻</button>
         </nav>
         <h1>{info[currentRune].letter}</h1>

@@ -145,6 +145,51 @@ button {
   border: 1px solid var(--gray-400);
 }
 
+.introScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  font-family: inherit;
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.introScreen h2 {
+    font-family: var(--font-space);
+    font-size: 1.62em;
+    line-height: 1.24;
+}
+.introScreen h3{
+  font-family: var(--font-rune);
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.introScreen p{
+  text-align: left;
+  font-size: 0.62em;
+  font-family: var(--font-rune);
+  }
+  
+.introScreen a{font-size: 0.48em;
+    font-family: var(--font-space);
+    text-transform: uppercase;
+    letter-spacing: 0.28vw;
+    font-weight: 800;
+    margin: 2vh auto;}
+.introScreen button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 2vh auto 1vh;
+}
+
+
 @media (max-width: 800px) {
   main {
     width: 90%;
