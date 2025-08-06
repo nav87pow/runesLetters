@@ -207,4 +207,7 @@ button.randomBtn:hover {
     flex-wrap: wrap;
       gap: 0.42rem;
     }
+    button{
+      font-size: 1.08em;
+    }
 }
