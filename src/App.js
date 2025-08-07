@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import aries from "./assets/aries.png";
 import cancer from "./assets/cancer.png";
 import gemini from "./assets/gemini.png";
@@ -284,6 +284,12 @@ const App = () => {
   const [currentRune, setCurrentRune] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
 
+  useEffect(() => {
+    document.title = "Consult the Runes";
+  }, []);
+
+
+
   const handelNextClick = () => {
     if (currentRune === info.length - 1) {
       setCurrentRune(0);
@@ -343,7 +349,7 @@ if (!hasStarted) {
 
         <nav>
           <button onClick={handelPrevClick}>≺</button>
-          <button className="randomBtn" onClick={handelRandomClick} > ↭ Consult the Runes ↭ </button>
+          <button className="randomBtn" onClick={handelRandomClick} > ↭ Consult the Runes↭ </button>
           <button onClick={handelNextClick}>≻</button>
         </nav>
         <h1>{info[currentRune].letter}</h1>
